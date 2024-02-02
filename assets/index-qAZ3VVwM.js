@@ -470,12 +470,6 @@ Error generating stack: `+o.message+`
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
-
-    transition: all 350ms ease-in-out forwards;
-    &:hover {
-      border: 1px solid transparent;
-      letter-spacing: 0;
-    }
   }
 `,gP=we(Te.div)`
   position: absolute;
@@ -488,7 +482,7 @@ Error generating stack: `+o.message+`
   background-attachment: fixed;
 
   z-index: -1;
-`;function yP(){return x.jsx(gP,{})}const vP={hidden:{opacity:0},visible:{opacity:1,transition:{duration:1}}},co={hidden:{opacity:0,y:100,rotate:5},visible:{opacity:1,y:0,rotate:0,transition:{duration:1.32,staggerChildren:.8}}},wP={hidden:{opacity:0},visible:{opacity:.3,transition:{duration:1},backgroundImage:"url(./src/assets/gym-inside4.jpg)"}};function xP(){return x.jsxs(Te.div,{className:"text",variants:co,whileInView:"visible",initial:"hidden",viewport:{once:!0},children:[x.jsx(Te.h1,{className:"title",variants:co,children:"Welcome to the 111 Fitness"}),x.jsx(Te.h2,{className:"title",variants:co,children:"Where workout, community and creativity meet."}),x.jsx(Te.a,{href:"#schedule",className:"button",variants:co,children:"Schedule a visit now"})]})}function SP(){return x.jsxs(mP,{variants:vP,whileInView:"visible",initial:"hidden",viewport:{once:!0},children:[x.jsx(yP,{variants:wP,initial:"hidden",whileInView:"visible",viewport:{once:!0}}),x.jsx(xP,{})]})}const kP={createGlobalStyle:A1},PP=kP.createGlobalStyle`
+`;function yP(){return x.jsx(gP,{})}const vP={hidden:{opacity:0},visible:{opacity:1,transition:{duration:1}}},co={hidden:{opacity:0,y:100,rotate:5},visible:{opacity:1,y:0,rotate:0,transition:{duration:1.32,staggerChildren:.8}}},wP={hidden:{opacity:0},visible:{opacity:.3,transition:{duration:1},backgroundImage:"url(./src/assets/gym-inside4.jpg)"}};function xP(){return x.jsxs(Te.div,{className:"text",variants:co,whileInView:"visible",initial:"hidden",viewport:{once:!0},children:[x.jsx(Te.h1,{className:"title",variants:co,children:"Welcome to the 111 Fitness"}),x.jsx(Te.h2,{className:"title",variants:co,children:"Where workout, community and creativity meet."}),x.jsx(Te.a,{href:"#schedule",className:"button",variants:co,whileHover:{border:"1px solid transparent",letterSpacing:0},children:"Schedule a visit now"})]})}function SP(){return x.jsxs(mP,{variants:vP,whileInView:"visible",initial:"hidden",viewport:{once:!0},children:[x.jsx(yP,{variants:wP,initial:"hidden",whileInView:"visible",viewport:{once:!0}}),x.jsx(xP,{})]})}const kP={createGlobalStyle:A1},PP=kP.createGlobalStyle`
   @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 
   :root {
