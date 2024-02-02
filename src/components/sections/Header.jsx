@@ -52,7 +52,7 @@ const StyledHeader = styled(motion.header)`
     text-transform: uppercase;
     cursor: pointer;
 
-    transition: 350ms ease-in-out;
+    transition: all 350ms ease-in-out forwards;
     &:hover {
       border: 1px solid transparent;
       letter-spacing: 0;
