@@ -97,6 +97,7 @@ export default function Reviews() {
         initial="hidden"
         whileInView="visible"
         transition={{ childrenStagger: 1 }}
+        viewport={{ once: true }}
       >
         <Review>
           <h3>E.G</h3>

@@ -24,11 +24,11 @@ const Section = styled.section`
   }
   h1 {
     position: relative;
-    font-size: 2.4rem;
+    font-size: 4rem;
     font-weight: 500;
     margin: 0;
     align-self: center;
-    border-bottom: 3px solid white;
+    border-bottom: 2px solid white;
   }
   p {
     position: relative;
@@ -37,9 +37,8 @@ const Section = styled.section`
     text-indent: 1rem;
   }
   .highlight {
-    color: #d6204e;
+    color: #e8a05e;
     text-shadow: 1px 1px black;
-    padding: 0 0.2rem;
   }
 `
 
@@ -51,7 +50,7 @@ export default function InfoWBackground() {
         At 111 Fitness, our expertly curated workout routines are designed to
         bring out the best in you, focusing on your{" "}
         <span className="highlight">individual goals</span> and needs each week.
-        Choose your preferred schedule, show up ready to sweat, and let us
+        Choose your preferred schedule, show up ready to sweat, and let us{" "}
         <span className="highlight">handle the rest</span>. Our dedicated team
         is committed to guiding you through a fitness journey that&apos;s as{" "}
         <span className="highlight">unique</span> as you are.

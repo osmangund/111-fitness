@@ -1,8 +1,9 @@
 import styled from "styled-components"
 import Instagram from "./icons/Instagram"
 import Facebook from "./icons/Facebook"
+import { motion } from "framer-motion"
 
-const Nav = styled.nav`
+const Nav = styled(motion.nav)`
   position: absolute;
   top: 0;
   left: 0;
@@ -54,9 +55,21 @@ const Nav = styled.nav`
     }
   }
 `
+
+const navVariants = {
+  hidden: { y: -100 },
+  animate: { y: 0, transition: { delay: 1, duration: 1 } },
+  whileInView: { y: 0, transition: { duration: 1 } },
+}
+
 export default function Navbar() {
   return (
-    <Nav>
+    <Nav
+      variants={navVariants}
+      initial="hidden"
+      whileInView="whileInView"
+      animate="animate"
+    >
       <a className="logo" href="/">
         111 Fitness
       </a>

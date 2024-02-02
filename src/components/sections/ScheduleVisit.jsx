@@ -45,28 +45,28 @@ const Form = styled.form`
       width: 50%;
     }
     &.submit {
-        align-items: center;
-        appearance: none;
-        background-color: #fff;
-        border-radius: 24px;
-        border-style: none;
-        box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
-          rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
-        box-sizing: border-box;
-        color: #3c4043;
-        cursor: pointer;
-        font-size: 14px;
-        height: 48px;
-        width: 35%;
-        letter-spacing: 0.25px;
-        &:hover {
-          background: #f6f9fe;
-          color: #174ea6;
-        }
+      align-items: center;
+      appearance: none;
+      background-color: #fff;
+      border-radius: 24px;
+      border-style: none;
+      box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+        rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+      box-sizing: border-box;
+      color: #3c4043;
+      cursor: pointer;
+      font-size: 14px;
+      height: 48px;
+      width: 35%;
+      letter-spacing: 0.25px;
+      &:hover {
+        background: #f6f9fe;
+        color: #174ea6;
       }
     }
   }
 `
+
 const NameWrapper = styled.div`
   display: flex;
   gap: 1rem;
@@ -91,9 +91,9 @@ export default function ScheduleVisit() {
       <InfoWrapper>
         <H1>Schedule a visit</H1>
         <P>
-          Take a free 30-minute tour of your 111 Fitness. You&apos;ll have the
-          opportunity to try equipment, observe classes, and get direct answers
-          to all of your questions.
+          Take a free 30-minute tour of your local 111 Fitness. You&apos;ll have
+          the opportunity to try equipment, observe classes, and get direct
+          answers to all of your questions.
         </P>
       </InfoWrapper>
       <Form>

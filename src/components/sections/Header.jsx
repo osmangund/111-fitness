@@ -4,10 +4,11 @@ import { motion } from "framer-motion"
 const StyledHeader = styled(motion.header)`
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
   text-align: center;
   color: #fafafa;
+  position: relative;
 
   &,
   .title,
@@ -34,7 +35,7 @@ const StyledHeader = styled(motion.header)`
     left: 0;
     opacity: 0.3;
 
-    background: url(./src/assets/header.jpg) no-repeat center center/cover;
+    /* background: url(./src/assets/header.jpg) no-repeat center center/cover; */
     background-color: rgba(0, 0, 0, 0.5);
     background-attachment: fixed;
   }
@@ -46,11 +47,35 @@ const StyledHeader = styled(motion.header)`
     align-self: center;
     padding: 1rem;
     border: 1px solid white;
+    letter-spacing: 5px;
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
+
+    transition: 350ms ease-in-out;
+    &:hover {
+      border: 1px solid transparent;
+      letter-spacing: 0;
+    }
   }
 `
+
+const StyledHeaderBg = styled(motion.div)`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+
+  background-image: url(./src/assets/header.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+
+  z-index: -1;
+`
+
+function HeaderBg() {
+  return <StyledHeaderBg></StyledHeaderBg>
+}
 
 const headerVariants = {
   hidden: { opacity: 0 },
@@ -66,8 +91,39 @@ const textVariants = {
     opacity: 1,
     y: 0,
     rotate: 0,
-    transition: { duration: 1.32, staggerChildren: 0.3236 },
+    transition: { duration: 1.32, staggerChildren: 0.8 },
   },
+}
+
+const headerBgVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 0.3,
+    transition: { duration: 1 },
+    backgroundImage: "url(./src/assets/gym-inside4.jpg)",
+  },
+}
+
+function HeaderText() {
+  return (
+    <motion.div
+      className="text"
+      variants={textVariants}
+      whileInView="visible"
+      initial="hidden"
+      viewport={{ once: true }}
+    >
+      <motion.h1 className="title" variants={textVariants}>
+        Welcome to the 111 Fitness
+      </motion.h1>
+      <motion.h2 className="title" variants={textVariants}>
+        Where workout, community and creativity meet.
+      </motion.h2>
+      <motion.a href="#schedule" className="button" variants={textVariants}>
+        Schedule a visit now
+      </motion.a>
+    </motion.div>
+  )
 }
 
 export default function Header() {
@@ -78,23 +134,13 @@ export default function Header() {
       initial="hidden"
       viewport={{ once: true }}
     >
-      <motion.div
-        className="text"
-        variants={textVariants}
-        whileInView="visible"
+      <HeaderBg
+        variants={headerBgVariants}
         initial="hidden"
+        whileInView="visible"
         viewport={{ once: true }}
-      >
-        <motion.h1 className="title" variants={textVariants}>
-          Welcome to the 111 Fitness
-        </motion.h1>
-        <motion.h2 className="title" variants={textVariants}>
-          Where workout, community and creativity meet.
-        </motion.h2>
-        <motion.a href="#schedule" className="button" variants={textVariants}>
-          Schedule a visit
-        </motion.a>
-      </motion.div>
+      />
+      <HeaderText />
     </StyledHeader>
   )
 }
