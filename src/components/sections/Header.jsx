@@ -51,12 +51,6 @@ const StyledHeader = styled(motion.header)`
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
-
-    transition: all 350ms ease-in-out forwards;
-    &:hover {
-      border: 1px solid transparent;
-      letter-spacing: 0;
-    }
   }
 `
 
@@ -119,7 +113,12 @@ function HeaderText() {
       <motion.h2 className="title" variants={textVariants}>
         Where workout, community and creativity meet.
       </motion.h2>
-      <motion.a href="#schedule" className="button" variants={textVariants}>
+      <motion.a
+        href="#schedule"
+        className="button"
+        variants={textVariants}
+        whileHover={{ border: "1px solid transparent", letterSpacing: 0 }}
+      >
         Schedule a visit now
       </motion.a>
     </motion.div>
