@@ -14,7 +14,7 @@ const Card = (props) => {
       variants={cardAnimation}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.25 }}
     >
       <div className="card__img">
         <img src={src} alt="" />

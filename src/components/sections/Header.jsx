@@ -52,6 +52,15 @@ const StyledHeader = styled(motion.header)`
     text-transform: uppercase;
     cursor: pointer;
   }
+  #test {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+  }
 `
 
 const StyledHeaderBg = styled(motion.div)`
@@ -93,8 +102,6 @@ const headerBgVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 0.3,
-    transition: { duration: 1 },
-    backgroundImage: "url(./src/assets/gym-inside4.jpg)",
   },
 }
 
@@ -117,7 +124,10 @@ function HeaderText() {
         href="#schedule"
         className="button"
         variants={textVariants}
-        whileHover={{ border: "1px solid transparent", letterSpacing: 0 }}
+        whileHover={{
+          border: "1px solid transparent",
+          letterSpacing: 0,
+        }}
       >
         Schedule a visit now
       </motion.a>
@@ -139,6 +149,7 @@ export default function Header() {
         whileInView="visible"
         viewport={{ once: true }}
       />
+
       <HeaderText />
     </StyledHeader>
   )
