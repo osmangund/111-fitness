@@ -64,7 +64,7 @@ const Section = styled(motion.section)`
 export default function Info() {
   return (
     <Section id="info">
-      <Card src="./src/assets/personal-trainer.jpg">
+      <Card src="images/personal-trainer.jpg">
         <h1>Personal Training</h1>
         <p>
           Achieve your dream body by working with one of our expert personal
@@ -72,7 +72,7 @@ export default function Info() {
           and help you on each and every step.
         </p>
       </Card>
-      <Card src="./src/assets/cardio.jpg">
+      <Card src="images/cardio.jpg">
         <h1>Cardio Training</h1>
         <p>
           Our cardio training area is filled with top of the line treadmills,
@@ -80,11 +80,12 @@ export default function Info() {
           heart rate up, and your body moving.
         </p>
       </Card>
-      <Card src="./src/assets/bench-press.jpg">
+      <Card src="images/bench-press.jpg">
         <h1>Strength Training</h1>
         <p>
           Unlock your true strength. 111 Fitness offers dumbbells up to 60kgs,
-          olympic plates, olympic barbells and strength machines. Designed for you.
+          olympic plates, olympic barbells and strength machines. Designed for
+          you.
         </p>
       </Card>
     </Section>

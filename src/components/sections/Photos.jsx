@@ -119,11 +119,11 @@ export default function Photos() {
       <AnimatedText text="From you" Wrapper="h1" />
 
       <Cards id="cards">
-        <Card src="./src/assets/trainee.jpg" />
-        <Card src="./src/assets/trainee2.jpg" />
-        <Card src="./src/assets/trainee3.jpg" />
-        <Card src="./src/assets/trainee4.jpg" />
-        <Card src="./src/assets/trainee5.jpg" />
+        <Card src="images/trainee.jpg" />
+        <Card src="images/trainee2.jpg" />
+        <Card src="images/trainee3.jpg" />
+        <Card src="images/trainee4.jpg" />
+        <Card src="images/trainee5.jpg" />
       </Cards>
     </Section>
   )

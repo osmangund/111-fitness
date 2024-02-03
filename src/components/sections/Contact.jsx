@@ -82,7 +82,7 @@ export default function Contact() {
       </div>
       <div className="contact__photo">
         <img
-          src="./src/assets/gym-inside4.jpg"
+          src="images/gym-inside4.jpg"
           alt="Reception of the fitness centre"
         />
       </div>

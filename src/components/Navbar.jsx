@@ -75,13 +75,13 @@ export default function Navbar() {
       </a>
       <ul>
         <li>
-          <a href="">Clubs</a>
+          <a href="#info">Info</a>
         </li>
         <li>
           <a href="#fromyou">From You</a>
         </li>
         <li>
-          <a href="#schedule">Schedule</a>
+          <a href="#schedule">Schedule A Visit</a>
         </li>
         <li>
           <a href="#contact">Contact</a>

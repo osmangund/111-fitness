@@ -69,7 +69,7 @@ const StyledHeaderBg = styled(motion.div)`
   height: 100%;
   opacity: 0.3;
 
-  background-image: url(./src/assets/header.jpg);
+  background-image: url(images/header.jpg);
   background-size: cover;
   background-attachment: fixed;
 

@@ -10,7 +10,7 @@ const Section = styled.section`
   color: whitesmoke;
   min-height: 80vh;
   position: relative;
-  background: url(./src/assets/gym-area.jpg) no-repeat center center/cover;
+  background: url(images/gym-area.jpg) no-repeat center center/cover;
   background-attachment: fixed;
 
   &::before {
