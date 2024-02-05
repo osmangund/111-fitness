@@ -31,7 +31,7 @@ const Cards = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(10, 1fr);
-  margin-block-start: 6rem; // Navbar
+  margin-block: 6rem; // Navbar
   padding-inline: 6rem;
 
   h1 {
@@ -80,6 +80,13 @@ const Cards = styled(motion.div)`
     span {
       display: inline-block;
     }
+  }
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-inline: 2rem;
   }
 `
 const defaultAnimations = {

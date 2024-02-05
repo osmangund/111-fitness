@@ -40,6 +40,16 @@ const Section = styled.section`
     color: #e8a05e;
     text-shadow: 1px 1px black;
   }
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    padding: 2rem;
+    h1 {
+      font-size: 2rem;
+      border-bottom: none;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
 `
 
 export default function InfoWBackground() {

@@ -7,9 +7,11 @@ const Section = styled.section`
   background-color: black;
   color: white;
   padding-inline-start: 3rem;
-
-  .contact__info {
+  .contact__info,
+  .contact__photo {
     width: 50%;
+  }
+  .contact__info {
     h1 {
       font-size: 3rem;
       margin-block: 3rem 0.4rem;
@@ -29,13 +31,35 @@ const Section = styled.section`
     }
   }
   .contact__photo {
-    width: 50%;
     height: 100%;
     img {
       width: 100%;
       height: 100%;
       max-height: 1024px;
       object-fit: cover;
+    }
+  }
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    padding: 0;
+    flex-direction: column-reverse;
+    .contact__info,
+    .contact__photo {
+      width: 100%;
+    }
+    .contact__info {
+      text-align: center;
+      h1 {
+        font-size: 2rem;
+        margin: 0;
+        margin-block: 1rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+    .contact__photo {
+      img {
+      }
     }
   }
 `

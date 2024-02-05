@@ -2,9 +2,11 @@ import styled from "styled-components"
 import Instagram from "./icons/Instagram"
 import Facebook from "./icons/Facebook"
 import { motion } from "framer-motion"
+import { Bars } from "./icons/Bars"
 
 const Nav = styled(motion.nav)`
-  position: absolute;
+  position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   right: 0;
@@ -31,6 +33,7 @@ const Nav = styled(motion.nav)`
     display: flex;
     gap: 2rem;
     list-style: none;
+
     li {
       a {
         color: white;
@@ -54,6 +57,53 @@ const Nav = styled(motion.nav)`
       }
     }
   }
+
+  #bars,
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    padding: 0 2rem;
+    a.logo {
+      font-size: 1.2rem;
+    }
+
+    ul {
+      position: fixed;
+      top: 50px;
+      left: -100%;
+
+      width: 100%;
+      height: 100vh;
+
+      gap: 5rem;
+      flex-direction: column;
+      justify-content: center;
+      background-color: black;
+      text-align: center;
+      padding: 1rem 0;
+
+      z-index: 1;
+      transition: all 0.5s;
+      li {
+        a {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    #mobile-checkbox:checked ~ ul {
+      left: 0;
+    }
+
+    #bars {
+      display: block;
+      path {
+        fill: white;
+      }
+    }
+  }
 `
 
 const navVariants = {
@@ -73,6 +123,10 @@ export default function Navbar() {
       <a className="logo" href="/">
         111 Fitness
       </a>
+      <input type="checkbox" name="mobile-checkbox" id="mobile-checkbox" />
+      <label htmlFor="mobile-checkbox">
+        <Bars />
+      </label>
       <ul>
         <li>
           <a href="#info">Info</a>

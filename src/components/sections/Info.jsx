@@ -59,6 +59,17 @@ const Section = styled(motion.section)`
       height: 6vh;
     }
   }
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    padding-inline: 2rem;
+    display: flex;
+    flex-direction: column;
+    h1 {
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
 `
 
 export default function Info() {

@@ -8,11 +8,22 @@ const Section = styled.section`
   min-height: 80vh;
   padding: 8rem 2rem;
   position: relative;
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+  }
 `
 
 const InfoWrapper = styled.div`
   width: 40%;
   padding-right: 2rem;
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    width: 100%;
+    padding: 0;
+  }
 `
 const H1 = styled.h1`
   text-transform: uppercase;
@@ -64,6 +75,9 @@ const Form = styled.form`
         color: #174ea6;
       }
     }
+  }
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    width: 100%;
   }
 `
 

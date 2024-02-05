@@ -49,6 +49,24 @@ const Section = styled.section`
       fill: black;
     }
   }
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    .smile-icon {
+      width: 64px;
+      height: 64px;
+    }
+    padding: 2rem 2rem;
+    h1 {
+      font-size: 1.8rem;
+    }
+    .reviews-wrapper {
+      flex-direction: column;
+      gap: 2rem;
+      .review {
+        margin: 1rem 0;
+      }
+    }
+  }
 `
 
 const smileVariants = {

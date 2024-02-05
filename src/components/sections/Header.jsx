@@ -61,6 +61,20 @@ const StyledHeader = styled(motion.header)`
     background-repeat: no-repeat;
     opacity: 0.4;
   }
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    h1.title {
+      font-size: 3rem;
+    }
+    h2.title {
+      font-size: 1rem;
+    }
+    a.button {
+      font-size: 0.8rem;
+      padding: 0.5rem;
+      letter-spacing: 0;
+    }
+  }
 `
 
 const StyledHeaderBg = styled(motion.div)`
