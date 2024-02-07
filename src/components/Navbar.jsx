@@ -3,11 +3,16 @@ import Instagram from "./icons/Instagram"
 import Facebook from "./icons/Facebook"
 import { motion } from "framer-motion"
 import { Bars } from "./icons/Bars"
+import { useEffect } from "react"
 
 const Nav = styled(motion.nav)`
   position: fixed;
   z-index: 2;
-  top: 0;
+  top: -50%;
+  transition: 350ms ease-in-out;
+  &.show {
+    top: 0;
+  }
   left: 0;
   right: 0;
 
@@ -17,15 +22,16 @@ const Nav = styled(motion.nav)`
 
   padding: 0 6rem;
   background-color: black;
-  min-height: 100px;
+  min-height: 40px;
 
   a {
     text-decoration: none;
   }
   .logo {
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
+    padding: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.05rem;
   }
@@ -113,6 +119,26 @@ const navVariants = {
 }
 
 export default function Navbar() {
+  let prevScrollPos = window.scrollY
+
+  useEffect(() => {
+    if (window.scrollY < 10) {
+      const nav = document.querySelector("nav")
+      nav.classList.add("show")
+    }
+  }, [])
+
+  window.addEventListener("scroll", function () {
+    const nav = document.querySelector("nav")
+    const currentScrollPos = window.scrollY
+
+    prevScrollPos > currentScrollPos
+      ? nav.classList.add("show")
+      : nav.classList.remove("show")
+
+    prevScrollPos = currentScrollPos
+  })
+
   return (
     <Nav
       variants={navVariants}
@@ -121,7 +147,7 @@ export default function Navbar() {
       animate="animate"
     >
       <a className="logo" href="/">
-        111 Fitness
+        111®
       </a>
       <input type="checkbox" name="mobile-checkbox" id="mobile-checkbox" />
       <label htmlFor="mobile-checkbox">
