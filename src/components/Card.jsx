@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"
 import { motion } from "framer-motion"
+import Image from "./Image/Image"
 
 const cardAnimation = {
   hidden: { opacity: 0.025, y: 35 },
@@ -17,7 +18,7 @@ const Card = (props) => {
       viewport={{ once: true, amount: 0.25 }}
     >
       <div className="card__img">
-        <img src={src} alt="" />
+        <Image src={src} alt="" ariaHidden={true} />
       </div>
       {children}
     </motion.div>

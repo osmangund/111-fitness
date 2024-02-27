@@ -114,7 +114,7 @@ const Nav = styled(motion.nav)`
 
 const navVariants = {
   hidden: { y: -100 },
-  animate: { y: 0, transition: { delay: 1, duration: 1 } },
+  animate: { y: 0, transition: { delay: 0.3, duration: 1 } },
   whileInView: { y: 0, transition: { duration: 1 } },
 }
 

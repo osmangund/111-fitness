@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { motion } from "framer-motion"
+import Image from "../Image/Image"
 
 const Section = styled.section`
   height: 100vh;
@@ -105,7 +106,7 @@ export default function Contact() {
         </span>
       </div>
       <div className="contact__photo">
-        <img
+        <Image
           src="images/gym-inside4.jpg"
           alt="Reception of the fitness centre"
         />

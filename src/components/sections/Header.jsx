@@ -35,7 +35,6 @@ const StyledHeader = styled(motion.header)`
     left: 0;
     opacity: 0.3;
 
-    /* background: url(./src/assets/header.jpg) no-repeat center center/cover; */
     background-color: rgba(0, 0, 0, 0.5);
     background-attachment: fixed;
   }
@@ -108,7 +107,7 @@ const textVariants = {
     opacity: 1,
     y: 0,
     rotate: 0,
-    transition: { duration: 1.32, staggerChildren: 0.8 },
+    transition: { duration: 0.9, staggerChildren: 0.4 },
   },
 }
 
@@ -129,7 +128,7 @@ function HeaderText() {
       viewport={{ once: true }}
     >
       <motion.h1 className="title" variants={textVariants}>
-        Welcome to the 111 Fitness
+        Welcome to 111 Fitness
       </motion.h1>
       <motion.h2 className="title" variants={textVariants}>
         Where workout, community and creativity meet.
@@ -139,7 +138,6 @@ function HeaderText() {
         className="button"
         variants={textVariants}
         whileHover={{
-          border: "1px solid transparent",
           letterSpacing: 0,
         }}
       >
