@@ -158,10 +158,13 @@ export default function Navbar() {
           <a href="#info">Info</a>
         </li>
         <li>
+          <a href="#reviews">Reviews</a>
+        </li>
+        <li>
           <a href="#fromyou">From You</a>
         </li>
         <li>
-          <a href="#schedule">Schedule A Visit</a>
+          <a href="#schedule">Visit Us</a>
         </li>
         <li>
           <a href="#contact">Contact</a>

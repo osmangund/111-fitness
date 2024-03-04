@@ -64,12 +64,27 @@ const Section = styled.section`
     }
   }
 `
+
+const variants = {
+  hidden: { opacity: 0, y: 100 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.9, staggerChildren: 0.4 },
+  },
+}
 export default function Contact() {
   return (
     <Section id="contact">
-      <div className="contact__info">
-        <h1>Contact</h1>
-        <p>
+      <motion.div
+        className="contact__info"
+        variants={variants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.75 }}
+      >
+        <motion.h1 variants={variants}>Contact</motion.h1>
+        <motion.p variants={variants}>
           <span className="wgh-500">111 Fitness Club</span>
           <br />
           1234/56 Gym St. No: 356
@@ -77,23 +92,23 @@ export default function Contact() {
           Gym City, Gym State 34000
           <br />
           (123) 456-7890
-        </p>
-        <h1>Hours</h1>
-        <p>
+        </motion.p>
+        <motion.h1 variants={variants}>Hours</motion.h1>
+        <motion.p variants={variants}>
           <span className="wgh-500">Mon-Fri: </span>5AM - 11PM
-        </p>
-        <p>
+        </motion.p>
+        <motion.p variants={variants}>
           <span className="wgh-500">Sat-Sun: </span>7AM - 7PM
-        </p>
+        </motion.p>
         <motion.h1
           initial={{ x: -400 }}
           whileInView={{ x: 0 }}
-          transition={{ delay: 0.75 }}
+          transition={{ delay: 2.75 }}
           viewport={{ once: true }}
         >
           Start today.
         </motion.h1>
-        <span>
+        <motion.span variants={variants}>
           <a
             target="_blank"
             rel="noreferrer"
@@ -103,8 +118,8 @@ export default function Contact() {
             osmangund®
           </a>{" "}
           2024. All rights reserved.
-        </span>
-      </div>
+        </motion.span>
+      </motion.div>
       <div className="contact__photo">
         <Image
           src="images/gym-inside4.jpg"

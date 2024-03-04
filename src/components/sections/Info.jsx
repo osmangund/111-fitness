@@ -1,8 +1,7 @@
 import styled from "styled-components"
-import { motion } from "framer-motion"
 import Card from "../Card"
 
-const Section = styled(motion.section)`
+const Section = styled.section`
   min-height: 100vh;
   background-color: black;
   color: white;

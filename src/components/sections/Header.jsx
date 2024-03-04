@@ -102,12 +102,12 @@ const headerVariants = {
 }
 
 const textVariants = {
-  hidden: { opacity: 0, y: 100, rotate: 5 },
+  hidden: { opacity: 0, y: 100, rotate: 2 },
   visible: {
     opacity: 1,
     y: 0,
     rotate: 0,
-    transition: { duration: 0.9, staggerChildren: 0.4 },
+    transition: { duration: 0.9, staggerChildren: 0.3236 },
   },
 }
 

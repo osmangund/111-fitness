@@ -70,13 +70,13 @@ const Section = styled.section`
 `
 
 const smileVariants = {
-  hidden: { rotate: 0, x: -100, y: -300, opacity: 0 },
+  hidden: { rotate: 0, x: -100, y: -100, opacity: 0 },
   visible: {
     rotate: [0, 0, 0, 0, 0, 16.18],
     opacity: 1,
     y: 0,
     x: 0,
-    transition: { duration: 1 },
+    transition: { duration: 0.75 },
   },
 }
 
@@ -105,7 +105,7 @@ export default function Reviews() {
         variants={smileVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.9 }}
       >
         <Smile className="smile-icon" />
       </motion.div>
@@ -114,7 +114,11 @@ export default function Reviews() {
         variants={reviewVariants}
         initial="hidden"
         whileInView="visible"
-        transition={{ childrenStagger: 1 }}
+        transition={{
+          when: "beforeChildren",
+          staggerChildren: 0.36,
+          delay: 0.5,
+        }}
         viewport={{ once: true }}
       >
         <Review>

@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
 const Section = styled.section`
   display: flex;
@@ -16,25 +17,27 @@ const Section = styled.section`
   }
 `
 
-const InfoWrapper = styled.div`
+const InfoWrapper = styled(motion.div)`
   width: 40%;
   padding-right: 2rem;
+
+  h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 100%;
     padding: 0;
   }
 `
-const H1 = styled.h1`
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 3rem;
-  margin: 0;
-`
-const P = styled.p`
-  font-size: 1.3rem;
-`
-const Form = styled.form`
+const Form = styled(motion.form)`
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -81,7 +84,7 @@ const Form = styled.form`
   }
 `
 
-const NameWrapper = styled.div`
+const NameWrapper = styled(motion.div)`
   display: flex;
   gap: 1rem;
   width: 100%;
@@ -93,24 +96,33 @@ const NameWrapper = styled.div`
   }
 `
 
-const InputWrapper = styled.div`
+const InputWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 `
 
+const variants = {
+  hidden: { opacity: 0, y: 100 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.9, staggerChildren: 0.4 },
+  },
+}
+
 export default function ScheduleVisit() {
   return (
     <Section id="schedule">
-      <InfoWrapper>
-        <H1>Schedule a visit</H1>
-        <P>
+      <InfoWrapper variants={variants} initial="hidden" whileInView="visible">
+        <motion.h1 variants={variants}>Schedule a visit</motion.h1>
+        <motion.p variants={variants}>
           Take a free 30-minute tour of your local 111 Fitness. You&apos;ll have
           the opportunity to try equipment, observe classes, and get direct
           answers to all of your questions.
-        </P>
+        </motion.p>
       </InfoWrapper>
-      <Form>
+      <Form variants={variants} initial="hidden" whileInView="visible">
         <NameWrapper>
           <InputWrapper>
             <label htmlFor="firstname">First Name</label>
