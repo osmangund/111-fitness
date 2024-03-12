@@ -114,15 +114,26 @@ const variants = {
 export default function ScheduleVisit() {
   return (
     <Section id="schedule">
-      <InfoWrapper variants={variants} initial="hidden" whileInView="visible">
-        <motion.h1 variants={variants}>Schedule a visit</motion.h1>
+      <InfoWrapper
+        variants={variants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <motion.h1 variants={variants}>Schedule visit</motion.h1>
         <motion.p variants={variants}>
-          Take a free 30-minute tour of your local 111 Fitness. You&apos;ll have
-          the opportunity to try equipment, observe classes, and get direct
-          answers to all of your questions.
+          Take a free 30-minute tour to your local 111 Fitness. You&apos;ll have
+          the opportunity to try equipments, observe classes, and get direct
+          answers to all of your questions. Fill out the form now and let us
+          handle the rest.
         </motion.p>
       </InfoWrapper>
-      <Form variants={variants} initial="hidden" whileInView="visible">
+      <Form
+        variants={variants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         <NameWrapper>
           <InputWrapper>
             <label htmlFor="firstname">First Name</label>
@@ -136,6 +147,10 @@ export default function ScheduleVisit() {
         <InputWrapper>
           <label htmlFor="email">Email</label>
           <input type="email" name="email" id="email" required />
+        </InputWrapper>
+        <InputWrapper>
+          <label htmlFor="number">Phone Number</label>
+          <input type="text" name="number" id="number" required />
         </InputWrapper>
         <InputWrapper>
           <label htmlFor="date">Date</label>

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Smile from "../icons/Smile"
+import Smile from "../../assets/icons/Smile"
 import { motion } from "framer-motion"
 import PropTypes from "prop-types"
 

@@ -1,18 +1,19 @@
 import styled from "styled-components"
-import Instagram from "./icons/Instagram"
-import Facebook from "./icons/Facebook"
+import Instagram from "../assets/icons/Instagram"
+import Facebook from "../assets/icons/Facebook"
 import { motion } from "framer-motion"
-import { Bars } from "./icons/Bars"
+import { Bars } from "../assets/icons/Bars"
 import { useEffect } from "react"
 
 const Nav = styled(motion.nav)`
   position: fixed;
   z-index: 2;
-  top: -50%;
   transition: 350ms ease-in-out;
-  &.show {
-    top: 0;
+  &.hide {
+    top: -50%;
   }
+
+  top: 0;
   left: 0;
   right: 0;
 
@@ -20,16 +21,15 @@ const Nav = styled(motion.nav)`
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 6rem;
+  padding: 0 10rem;
   background-color: black;
-  min-height: 40px;
-
+  /* min-height: 40px; */
   a {
     text-decoration: none;
   }
   .logo {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     padding: 1rem;
     text-transform: uppercase;
@@ -44,8 +44,8 @@ const Nav = styled(motion.nav)`
       a {
         color: white;
         text-decoration: none;
-        font-size: 1.2rem;
-
+        font-size: 1rem;
+        font-weight: 500;
         &:hover {
           color: #ccc;
         }
@@ -94,7 +94,7 @@ const Nav = styled(motion.nav)`
       transition: all 0.5s;
       li {
         a {
-          font-size: 1.5rem;
+          font-size: 1.2rem;
         }
       }
     }
@@ -111,20 +111,13 @@ const Nav = styled(motion.nav)`
     }
   }
 `
-
-const navVariants = {
-  hidden: { y: -100 },
-  animate: { y: 0, transition: { delay: 0.3, duration: 1 } },
-  whileInView: { y: 0, transition: { duration: 1 } },
-}
-
 export default function Navbar() {
   let prevScrollPos = window.scrollY
 
   useEffect(() => {
-    if (window.scrollY < 10) {
+    if (window.scrollY > 10) {
       const nav = document.querySelector("nav")
-      nav.classList.add("show")
+      nav.classList.add("hide")
     }
   }, [])
 
@@ -132,20 +125,15 @@ export default function Navbar() {
     const nav = document.querySelector("nav")
     const currentScrollPos = window.scrollY
 
-    prevScrollPos > currentScrollPos
-      ? nav.classList.add("show")
-      : nav.classList.remove("show")
+    prevScrollPos < currentScrollPos
+      ? nav.classList.add("hide")
+      : nav.classList.remove("hide")
 
     prevScrollPos = currentScrollPos
   })
 
   return (
-    <Nav
-      variants={navVariants}
-      initial="hidden"
-      whileInView="whileInView"
-      animate="animate"
-    >
+    <Nav>
       <a className="logo" href="/">
         111®
       </a>
