@@ -4,7 +4,7 @@ const styled = { createGlobalStyle }
 
 const GlobalStyles = styled.createGlobalStyle`
   :root {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-synthesis: none;
     text-rendering: optimizeLegibility;

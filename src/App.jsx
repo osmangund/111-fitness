@@ -6,8 +6,8 @@ import InfoWBackground from "./components/sections/InfoWBackground"
 import Photos from "./components/sections/Photos"
 import Reviews from "./components/sections/Reviews"
 import ScheduleVisit from "./components/sections/ScheduleVisit"
-import Header from "./components/sections/header"
-import GlobalStyles from "./components/styles/Global"
+import Header from "./components/sections/Header"
+import GlobalStyles from "./styles/Global"
 
 const theme = {
   colors: {
