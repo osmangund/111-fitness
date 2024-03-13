@@ -2,12 +2,7 @@ import { motion } from "framer-motion"
 import styled from "styled-components"
 
 const Section = styled(motion.section)`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   padding: 6rem;
-  gap: 2rem;
-
   color: whitesmoke;
   min-height: 80vh;
   position: relative;
@@ -26,10 +21,20 @@ const Section = styled(motion.section)`
   h1 {
     position: relative;
     font-size: 4rem;
+
     font-weight: 500;
     margin: 0;
     align-self: center;
     border-bottom: 2px solid white;
+    display: inline-block;
+    background-image: radial-gradient(
+      120.96% 120.96% at 50% -20.96%,
+      #696969 0%,
+      hsla(0, 0%, 100%, 0.78) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
   }
   p {
     position: relative;
@@ -38,7 +43,7 @@ const Section = styled(motion.section)`
     text-indent: 1rem;
   }
   .highlight {
-    color: #e8a05e;
+    font-weight: bold;
     text-shadow: 1px 1px black;
   }
   @media (max-width: ${({ theme }) => theme.mobile}) {
@@ -51,6 +56,12 @@ const Section = styled(motion.section)`
       font-size: 1rem;
     }
   }
+`
+
+const Wrapper = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 `
 
 const sectionVariants = {
@@ -76,29 +87,41 @@ export default function InfoWBackground() {
       whileInView="visible"
       viewport={{ once: true, amount: 0.4 }}
     >
-      <motion.div
+      <Wrapper
         variants={textVariants}
         initial="initial"
         animate="visible"
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}
       >
-        <motion.h1 variants={textVariants}>Personalized workouts.</motion.h1>
-        <motion.p variants={textVariants}>
-          At 111 Fitness, our expertly curated workout routines are designed to
-          bring out the best in you, focusing on your{" "}
-          <span className="highlight">individual goals</span> and needs each
-          week. Choose your preferred schedule, show up ready to sweat, and let
-          us <span className="highlight">handle the rest</span>. Our dedicated
-          team is committed to guiding you through a fitness journey that&apos;s
-          as <span className="highlight">unique</span> as you are.
-        </motion.p>
-        <motion.h1 variants={textVariants}>Fresh space for everyone.</motion.h1>
-        <motion.p variants={textVariants}>
-          Enough space for you to gain your dream body while socializing. Your
-          local studio is 3000 square feet (~300m²).
-        </motion.p>
-      </motion.div>
+        <div>
+          <motion.h1 variants={textVariants}>Personalized workouts.</motion.h1>
+          <motion.p variants={textVariants}>
+            At 111 Fitness, our expertly curated workout routines are designed
+            to bring out the best in you, focusing on your{" "}
+            <span className="highlight">individual goals</span> and needs each
+            week. Choose your preferred schedule, show up ready to sweat, and
+            let us <span className="highlight">handle the rest</span>. Our
+            dedicated team is committed to guiding you through a fitness journey
+            that&apos;s as <span className="highlight">unique</span> as you are.
+          </motion.p>
+        </div>
+        <div>
+          <motion.h1 variants={textVariants}>
+            Fresh space for everyone.
+          </motion.h1>
+          <motion.p variants={textVariants}>
+            Enough space for you to gain your dream body while socializing. Your
+            local studio is 3000 square feet (~300m²). We have a{" "}
+            <span className="highlight">wide range of equipment</span> to suit
+            your needs. Our{" "}
+            <span className="highlight">clean and modern facilities</span> are
+            designed to make you feel comfortable and motivated.{" "}
+            <span className="highlight">Join us</span> and experience the
+            difference for yourself.
+          </motion.p>
+        </div>
+      </Wrapper>
     </Section>
   )
 }
