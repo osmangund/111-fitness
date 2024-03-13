@@ -28,7 +28,7 @@ const Section = styled(motion.section)`
     border-bottom: 2px solid white;
     display: inline-block;
     background-image: radial-gradient(
-      120.96% 120.96% at 50% -20.96%,
+      120.96% 120.96% at 50% -60%,
       #696969 0%,
       hsla(0, 0%, 100%, 0.78) 100%
     );
@@ -39,7 +39,7 @@ const Section = styled(motion.section)`
   p {
     position: relative;
     font-size: 1.3rem;
-    font-weight: 300;
+    font-weight: 200;
     text-indent: 1rem;
   }
   .highlight {

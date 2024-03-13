@@ -134,7 +134,7 @@ export default function Navbar() {
 
   return (
     <Nav>
-      <a className="logo" href="/">
+      <a className="logo" href="/fitness-website">
         111®
       </a>
       <input type="checkbox" name="mobile-checkbox" id="mobile-checkbox" />
