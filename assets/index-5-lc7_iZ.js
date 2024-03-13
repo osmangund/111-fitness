@@ -156,7 +156,7 @@ Error generating stack: `+o.message+`
       }
     }
   }
-`;function Yk(){let e=window.scrollY;return N.useEffect(()=>{window.scrollY>10&&document.querySelector("nav").classList.add("hide")},[]),window.addEventListener("scroll",function(){const t=document.querySelector("nav"),n=window.scrollY;e<n?t.classList.add("hide"):t.classList.remove("hide"),e=n}),x.jsxs(Kk,{children:[x.jsx("a",{className:"logo",href:"/",children:"111®"}),x.jsx("input",{type:"checkbox",name:"mobile-checkbox",id:"mobile-checkbox"}),x.jsx("label",{htmlFor:"mobile-checkbox",children:x.jsx(Gk,{})}),x.jsxs("ul",{children:[x.jsx("li",{children:x.jsx("a",{href:"#info",children:"Info"})}),x.jsx("li",{children:x.jsx("a",{href:"#reviews",children:"Reviews"})}),x.jsx("li",{children:x.jsx("a",{href:"#fromyou",children:"From You"})}),x.jsx("li",{children:x.jsx("a",{href:"#schedule",children:"Visit Us"})}),x.jsx("li",{children:x.jsx("a",{href:"#contact",children:"Contact"})})]}),x.jsxs("div",{className:"socials",children:[x.jsx("a",{href:"#",children:x.jsx(M1,{})}),x.jsx("a",{href:"#",children:x.jsx(D1,{})})]})]})}var tg={exports:{}},Qk="SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED",Xk=Qk,Zk=Xk;function ng(){}function rg(){}rg.resetWarningCache=ng;var qk=function(){function e(r,i,o,s,a,l){if(l!==Zk){var u=new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");throw u.name="Invariant Violation",u}}e.isRequired=e;function t(){return e}var n={array:e,bigint:e,bool:e,func:e,number:e,object:e,string:e,symbol:e,any:e,arrayOf:t,element:e,elementType:e,instanceOf:t,node:e,objectOf:t,oneOf:t,oneOfType:t,shape:t,exact:t,checkPropTypes:rg,resetWarningCache:ng};return n.PropTypes=n,n};tg.exports=qk();var Jk=tg.exports;const un=Gd(Jk),eP=ge.div`
+`;function Yk(){let e=window.scrollY;return N.useEffect(()=>{window.scrollY>10&&document.querySelector("nav").classList.add("hide")},[]),window.addEventListener("scroll",function(){const t=document.querySelector("nav"),n=window.scrollY;e<n?t.classList.add("hide"):t.classList.remove("hide"),e=n}),x.jsxs(Kk,{children:[x.jsx("a",{className:"logo",href:"/fitness-website",children:"111®"}),x.jsx("input",{type:"checkbox",name:"mobile-checkbox",id:"mobile-checkbox"}),x.jsx("label",{htmlFor:"mobile-checkbox",children:x.jsx(Gk,{})}),x.jsxs("ul",{children:[x.jsx("li",{children:x.jsx("a",{href:"#info",children:"Info"})}),x.jsx("li",{children:x.jsx("a",{href:"#reviews",children:"Reviews"})}),x.jsx("li",{children:x.jsx("a",{href:"#fromyou",children:"From You"})}),x.jsx("li",{children:x.jsx("a",{href:"#schedule",children:"Visit Us"})}),x.jsx("li",{children:x.jsx("a",{href:"#contact",children:"Contact"})})]}),x.jsxs("div",{className:"socials",children:[x.jsx("a",{href:"#",children:x.jsx(M1,{})}),x.jsx("a",{href:"#",children:x.jsx(D1,{})})]})]})}var tg={exports:{}},Qk="SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED",Xk=Qk,Zk=Xk;function ng(){}function rg(){}rg.resetWarningCache=ng;var qk=function(){function e(r,i,o,s,a,l){if(l!==Zk){var u=new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");throw u.name="Invariant Violation",u}}e.isRequired=e;function t(){return e}var n={array:e,bigint:e,bool:e,func:e,number:e,object:e,string:e,symbol:e,any:e,arrayOf:t,element:e,elementType:e,instanceOf:t,node:e,objectOf:t,oneOf:t,oneOfType:t,shape:t,exact:t,checkPropTypes:rg,resetWarningCache:ng};return n.PropTypes=n,n};tg.exports=qk();var Jk=tg.exports;const un=Gd(Jk),eP=ge.div`
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -352,7 +352,7 @@ Error generating stack: `+o.message+`
     border-bottom: 2px solid white;
     display: inline-block;
     background-image: radial-gradient(
-      120.96% 120.96% at 50% -20.96%,
+      120.96% 120.96% at 50% -60%,
       #696969 0%,
       hsla(0, 0%, 100%, 0.78) 100%
     );
@@ -363,7 +363,7 @@ Error generating stack: `+o.message+`
   p {
     position: relative;
     font-size: 1.3rem;
-    font-weight: 300;
+    font-weight: 200;
     text-indent: 1rem;
   }
   .highlight {
