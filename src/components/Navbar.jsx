@@ -3,7 +3,7 @@ import Instagram from "../assets/icons/Instagram"
 import Facebook from "../assets/icons/Facebook"
 import { motion } from "framer-motion"
 import { Bars } from "../assets/icons/Bars"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 const Nav = styled(motion.nav)`
   position: fixed;
@@ -37,8 +37,13 @@ const Nav = styled(motion.nav)`
   }
   ul {
     display: flex;
-    gap: 2rem;
+    gap: 14rem;
     list-style: none;
+
+    #nav-links {
+      display: flex;
+      gap: 2rem;
+    }
 
     li {
       a {
@@ -77,7 +82,7 @@ const Nav = styled(motion.nav)`
 
     ul {
       position: fixed;
-      top: 50px;
+      top: 30px;
       left: -100%;
 
       width: 100%;
@@ -92,6 +97,14 @@ const Nav = styled(motion.nav)`
 
       z-index: 1;
       transition: all 0.5s;
+
+      #nav-links {
+        flex-direction: column;
+      }
+      .socials {
+        align-items: center;
+        justify-content: center;
+      }
       li {
         a {
           font-size: 1.2rem;
@@ -99,9 +112,13 @@ const Nav = styled(motion.nav)`
       }
     }
 
-    #mobile-checkbox:checked ~ ul {
+    .showUl {
       left: 0;
     }
+
+    /* #mobile-checkbox:checked ~ ul {
+      left: 0;
+    } */
 
     #bars {
       display: block;
@@ -113,6 +130,7 @@ const Nav = styled(motion.nav)`
 `
 export default function Navbar() {
   let prevScrollPos = window.scrollY
+  const [ulShowing, setUlShowing] = useState(false)
 
   useEffect(() => {
     if (window.scrollY > 10) {
@@ -120,6 +138,37 @@ export default function Navbar() {
       nav.classList.add("hide")
     }
   }, [])
+
+  useEffect(() => {
+    const ul = document.querySelector("ul")
+    const mobileCheckbox = document.querySelector("#mobile-checkbox")
+
+    const handleChange = () => {
+      setUlShowing(!ulShowing)
+    }
+
+    const handleClick = () => {
+      setUlShowing(false)
+    }
+
+    mobileCheckbox.addEventListener("change", handleChange)
+    ul.addEventListener("click", handleClick)
+
+    return () => {
+      mobileCheckbox.removeEventListener("change", handleChange)
+      ul.removeEventListener("click", handleClick)
+    }
+  }, [ulShowing])
+
+  useEffect(() => {
+    const ul = document.querySelector("ul")
+
+    if (ulShowing) {
+      ul.classList.add("showUl")
+    } else {
+      ul.classList.remove("showUl")
+    }
+  }, [ulShowing])
 
   window.addEventListener("scroll", function () {
     const nav = document.querySelector("nav")
@@ -132,9 +181,11 @@ export default function Navbar() {
     prevScrollPos = currentScrollPos
   })
 
+  console.log(ulShowing)
+
   return (
     <Nav>
-      <a className="logo" href="/fitness-website">
+      <a className="logo" href="/fitness-website/">
         111®
       </a>
       <input type="checkbox" name="mobile-checkbox" id="mobile-checkbox" />
@@ -142,30 +193,32 @@ export default function Navbar() {
         <Bars />
       </label>
       <ul>
-        <li>
-          <a href="#info">Info</a>
-        </li>
-        <li>
-          <a href="#reviews">Reviews</a>
-        </li>
-        <li>
-          <a href="#fromyou">From You</a>
-        </li>
-        <li>
-          <a href="#schedule">Visit Us</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
+        <div id="nav-links">
+          <li>
+            <a href="#info">Info</a>
+          </li>
+          <li>
+            <a href="#reviews">Reviews</a>
+          </li>
+          <li>
+            <a href="#fromyou">From You</a>
+          </li>
+          <li>
+            <a href="#schedule">Visit Us</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </div>
+        <div className="socials">
+          <a href="#">
+            <Facebook />
+          </a>
+          <a href="#">
+            <Instagram />
+          </a>
+        </div>
       </ul>
-      <div className="socials">
-        <a href="#">
-          <Facebook />
-        </a>
-        <a href="#">
-          <Instagram />
-        </a>
-      </div>
     </Nav>
   )
 }

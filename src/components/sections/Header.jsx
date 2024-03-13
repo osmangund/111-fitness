@@ -139,8 +139,8 @@ function HeaderText() {
         variants={textVariants}
         whileHover={{
           letterSpacing: 0,
-          borderColor: "white",
-          transition: { duration: 0.6 },
+          borderColor: "rgb(255, 255, 255)",
+          transition: { duration: 0.3 },
         }}
       >
         Schedule a visit now
