@@ -726,7 +726,7 @@ Error generating stack: `+o.message+`
   z-index: -3;
 `;function TP(){return x.jsx(CP,{})}const EP={hidden:{opacity:0},visible:{opacity:1,transition:{duration:1}}},mo={hidden:{opacity:0,scale:.9},visible:{opacity:1,scale:1,transition:{duration:2}}},jP={hidden:{opacity:0},visible:{opacity:.3}};function AP(){return x.jsxs(O.div,{className:"text-wrapper",variants:mo,whileInView:"visible",initial:"hidden",viewport:{once:!0},children:[x.jsx(O.h1,{className:"title",variants:mo,children:"Welcome to 111 Fitness."}),x.jsx(O.h2,{className:"title gradient",variants:mo,children:"Where workout, community and creativity meet."}),x.jsx(O.a,{href:"#schedule",className:"button",variants:mo,whileHover:{letterSpacing:0,borderColor:"rgb(255, 255, 255)",transition:{duration:.3}},children:"Schedule a visit now"})]})}function VP(){return x.jsx(O.div,{className:"scroll-down",initial:{opacity:0,y:30},whileInView:{opacity:1,y:0,transition:{repeat:1/0,ease:"easeInOut",duration:.75,repeatType:"reverse"}},viewport:{once:!0,amount:.5},children:x.jsx(kP,{})})}function LP(){return x.jsxs(PP,{variants:EP,whileInView:"visible",initial:"hidden",viewport:{once:!0},children:[x.jsx(TP,{variants:jP,initial:"hidden",whileInView:"visible",viewport:{once:!0}}),x.jsx(AP,{}),x.jsx(VP,{})]})}const RP={createGlobalStyle:_1},_P=RP.createGlobalStyle`
   :root {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
