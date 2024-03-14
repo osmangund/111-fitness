@@ -181,8 +181,6 @@ export default function Navbar() {
     prevScrollPos = currentScrollPos
   })
 
-  console.log(ulShowing)
-
   return (
     <Nav>
       <a className="logo" href="/fitness-website/">
