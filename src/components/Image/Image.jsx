@@ -20,7 +20,7 @@ const BlurLoadDiv = styled.div`
       transition: opacity 200ms ease-in-out;
     }
   }
-
+/* 
   &::before {
     content: "";
     position: absolute;
@@ -41,7 +41,7 @@ const BlurLoadDiv = styled.div`
     100% {
       background-color: rgba(255, 255, 255, 0);
     }
-  }
+  } */
 `
 
 export default function Image({ src, alt, ariaHidden = false }) {
@@ -51,6 +51,7 @@ export default function Image({ src, alt, ariaHidden = false }) {
     const blurDivs = document.querySelectorAll(".blur-load")
     blurDivs.forEach((div) => {
       const img = div.querySelector("img")
+      console.log(img)
       function loaded() {
         div.classList.add("loaded")
       }
