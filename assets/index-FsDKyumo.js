@@ -191,7 +191,7 @@ Error generating stack: `+o.message+`
       transition: opacity 200ms ease-in-out;
     }
   }
-
+/* 
   &::before {
     content: "";
     position: absolute;
@@ -212,8 +212,8 @@ Error generating stack: `+o.message+`
     100% {
       background-color: rgba(255, 255, 255, 0);
     }
-  }
-`;function vc({src:e,alt:t,ariaHidden:n=!1}){let r=e.replace(/\.jpg$/,"-small.jpg");return D.useEffect(()=>{document.querySelectorAll(".blur-load").forEach(o=>{const s=o.querySelector("img");function a(){o.classList.add("loaded")}s.complete?a():s.addEventListener("load",a)})}),x.jsx(eP,{className:"blur-load",style:{backgroundImage:`url(${r})`},children:x.jsx("img",{src:e,alt:t,"aria-hidden":n,loading:"lazy"})})}vc.propTypes={src:un.string,alt:un.string,ariaHidden:un.bool};const tP=ge.section`
+  } */
+`;function vc({src:e,alt:t,ariaHidden:n=!1}){let r=e.replace(/\.jpg$/,"-small.jpg");return D.useEffect(()=>{document.querySelectorAll(".blur-load").forEach(o=>{const s=o.querySelector("img");console.log(s);function a(){o.classList.add("loaded")}s.complete?a():s.addEventListener("load",a)})}),x.jsx(eP,{className:"blur-load",style:{backgroundImage:`url(${r})`},children:x.jsx("img",{src:e,alt:t,"aria-hidden":n,loading:"lazy"})})}vc.propTypes={src:un.string,alt:un.string,ariaHidden:un.bool};const tP=ge.section`
   height: 100vh;
   display: flex;
   background-color: black;
