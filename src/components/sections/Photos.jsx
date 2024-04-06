@@ -89,7 +89,7 @@ const Cards = styled(motion.div)`
     padding-inline: 2rem;
   }
 `
-const defaultAnimations = {
+const letterByLetterTextAnimations = {
   hidden: { opacity: 0, y: 15 },
   visible: { opacity: 1, y: 0 },
 }
@@ -102,7 +102,7 @@ const AnimatedText = (props) => {
       <span className="sr-only">{text}</span>
       <motion.span
         aria-hidden
-        variants={defaultAnimations}
+        variants={letterByLetterTextAnimations}
         initial="hidden"
         whileInView="visible"
         transition={{ staggerChildren: 0.1 }}
@@ -110,7 +110,7 @@ const AnimatedText = (props) => {
       >
         {text.split("").map((char, i) => {
           return (
-            <motion.span variants={defaultAnimations} key={i}>
+            <motion.span variants={letterByLetterTextAnimations} key={i}>
               {char}
             </motion.span>
           )
