@@ -8,7 +8,7 @@ const Section = styled.section`
   text-align: center;
   h1 {
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: -2px;
     font-size: 3rem;
   }
   .sr-only {
@@ -105,7 +105,7 @@ const AnimatedText = (props) => {
         variants={letterByLetterTextAnimations}
         initial="hidden"
         whileInView="visible"
-        transition={{ staggerChildren: 0.1 }}
+        transition={{ staggerChildren: 0.08 }}
         viewport={{ once: true, amount: 1, threshold: 1 }}
       >
         {text.split("").map((char, i) => {

@@ -8,6 +8,8 @@ const Section = styled.section`
   background-color: black;
   color: white;
   padding-inline-start: 3rem;
+  position: relative;
+
   .contact__info,
   .contact__photo {
     width: 50%;
@@ -18,6 +20,7 @@ const Section = styled.section`
       margin-block: 3rem 0.4rem;
       margin-inline: 0;
     }
+
     p {
       font-size: 1.5rem;
       font-weight: 300;
@@ -40,6 +43,11 @@ const Section = styled.section`
       object-fit: cover;
     }
   }
+  .bottom {
+    position: absolute;
+    bottom: 0;
+    padding-block: 40px;
+  }
   @media (max-width: ${({ theme }) => theme.mobile}) {
     padding: 0;
     flex-direction: column-reverse;
@@ -58,9 +66,10 @@ const Section = styled.section`
         font-size: 1rem;
       }
     }
-    .contact__photo {
-      img {
-      }
+
+    .bottom {
+      position: relative;
+      padding-block: 40px;
     }
   }
 `
@@ -70,7 +79,7 @@ const variants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.9, staggerChildren: 0.4 },
+    transition: { duration: 0.45, staggerChildren: 0.2 },
   },
 }
 export default function Contact() {
@@ -83,7 +92,9 @@ export default function Contact() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.75 }}
       >
-        <motion.h1 variants={variants}>Contact</motion.h1>
+        <motion.h1 variants={variants} className="big-title">
+          Contact Us
+        </motion.h1>
         <motion.p variants={variants}>
           <span className="wgh-500">111 Fitness Club</span>
           <br />
@@ -100,25 +111,20 @@ export default function Contact() {
         <motion.p variants={variants}>
           <span className="wgh-500">Sat-Sun: </span>7AM - 7PM
         </motion.p>
-        <motion.h1
-          initial={{ x: -400 }}
-          whileInView={{ x: 0 }}
-          transition={{ delay: 2.75 }}
-          viewport={{ once: true }}
-        >
-          Start today.
-        </motion.h1>
-        <motion.span variants={variants}>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://linkedin.com/in/osmangund"
-            className="wgh-500"
-          >
-            osmangund®
-          </a>{" "}
-          2024. All rights reserved.
-        </motion.span>
+        <div className="bottom">
+          <motion.h1 variants={variants}>Start today.</motion.h1>
+          <motion.span variants={variants}>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://linkedin.com/in/osmangund"
+              className="wgh-500"
+            >
+              osmangund®
+            </a>{" "}
+            2024. All rights reserved.
+          </motion.span>
+        </div>
       </motion.div>
       <div className="contact__photo">
         <Image

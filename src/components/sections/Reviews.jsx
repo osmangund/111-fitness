@@ -117,7 +117,6 @@ export default function Reviews() {
         transition={{
           when: "beforeChildren",
           staggerChildren: 0.36,
-          delay: 0.5,
         }}
         viewport={{ once: true }}
       >
