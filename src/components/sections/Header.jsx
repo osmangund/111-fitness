@@ -9,23 +9,29 @@ const StyledHeader = styled(motion.header)`
   align-items: center;
   justify-content: center;
   text-align: center;
+
   color: #fafafa;
 
   .text-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 800px;
   }
   h1.title {
     font-size: 3.5rem;
+    line-height: 88px;
     margin: 0;
+    letter-spacing: 0.25px;
     color: #fcfcfc;
     filter: drop-shadow(0 0 0.8rem black);
   }
 
   h2.title {
     font-size: 1.3rem;
-    margin-bottom: 2rem;
+    line-height: 32px;
+    padding-bottom: 24px;
+    display: block;
   }
 
   .title.gradient {
@@ -41,13 +47,16 @@ const StyledHeader = styled(motion.header)`
   }
 
   .button {
-    color: #fcfcfc;
+    background-color: hsl(240, 28%, 60%);
+    color: hsl(0, 0%, 100%);
+    text-shadow: 0.5px 0.5px 0.5px black;
     text-decoration: none;
-    border-radius: 3px;
-    padding-block: 0.5rem;
-    padding-inline: 1rem;
-    border: 1px solid gray;
+    border-radius: 30px;
+    padding-block: 0.75rem;
+    padding-inline: 60px;
+    border: 1px solid hsl(0, 0%, 60%);
     letter-spacing: -0.1px;
+    letter-spacing: 1px;
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
@@ -143,7 +152,7 @@ function HeaderText() {
           transition: { duration: 0.3 },
         }}
       >
-        Schedule a visit now
+        Join us
       </motion.a>
     </motion.div>
   )

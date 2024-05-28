@@ -30,7 +30,7 @@ const Nav = styled(motion.nav)`
   .logo {
     color: white;
     font-size: 1.4rem;
-    font-weight: bold;
+    font-weight: 100;
     padding: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.05rem;
@@ -50,7 +50,8 @@ const Nav = styled(motion.nav)`
         color: white;
         text-decoration: none;
         font-size: 1rem;
-        font-weight: 500;
+        text-transform: uppercase;
+        font-weight: 200;
         &:hover {
           color: #ccc;
         }
